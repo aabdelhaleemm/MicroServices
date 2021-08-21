@@ -26,6 +26,7 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetProducts()
         {
+            _logger.LogInformation("CATALOG COMTESDFDSF");
             return Ok(await _productRepository.GetProductsAsync());
         }
 
